@@ -1,0 +1,1737 @@
+                                                                LISTA COM 36 EXERCICIOS PUC GO
+Exercício 01: 
+
+1 - O coração humano bate em média uma vez por segundo. Desenvolva um algoritmo para calcular e escrever quantas vezes o coração de uma pessoa baterá se viver X anos. Dado de entrada: idade da pessoa (inteiro em anos).Considerações: 1 ano = 365,25 dias, 1 dia = 24horas, 1 hora = 60 minutos e 1 minuto = 60 segundos. 
+
+ 
+
+#include <iostream> 
+
+#include <windows.h> 
+
+using namespace std; 
+
+ 
+ 
+
+int main() 
+
+ { 
+
+int anos; 
+
+float dias, horas, segundos, batimentos, anoaux; 
+
+anoaux = 365.25; 
+
+dias = 24; 
+
+horas = 60; 
+
+segundos = 60; 
+
+batimentos = 1; 
+
+cout << "Digite quantos anos tem para calcular seus batimentos ate hoje: "; 
+
+cin >> anos; 
+
+anos = anos * anoaux * dias * horas * segundos; 
+
+batimentos = anos * batimentos; 
+
+cout << "De acordo com a quantidade de anos seu coracao bateu uma media de " << batimentos << " batimentos"	; 
+
+ } 
+
+ 
+
+Exercício 02: 
+
+2 - Um fabricante de latas deseja desenvolver um algoritmo para calcular o custo de uma latacilíndrica de alumínio. O custo do alumínio é R$ 100,00 por m2. Dados de Entrada: raio ealtura da lata (em metros). Área da lata = área da base (π* raio2* 2) + área do lado (2 * π*raio * altura). Considere o preço do alumínio por m2 como sendo uma constante. 
+
+#include <iostream> 
+
+#include <windows.h> 
+
+ 
+ 
+
+using namespace std; 
+
+ 
+ 
+
+int main() 
+
+ { 
+
+ 
+ 
+
+float aluminiom2, raio, altura, area, arealado, areafinal; 
+
+ cout << "escreva o raio da lata em metros: "; 
+
+      cin >> raio; 
+
+   cout << "escreva a altura da lata em metros: "; 
+
+    cin >> altura; 
+
+area = 3.14 * (raio * raio) * 2; 
+
+ arealado = (2* 3.14 * raio * altura); 
+
+  areafinal = area + arealado; 
+
+aluminiom2 = areafinal * 100.00; 
+
+cout << "O custo referente a quantidade de metros quadrados do aluminio eh de R$" << aluminiom2; 
+
+ } 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+Exercício 03: 
+
+3 - Teorema de Pitágoras: H2= L12+ L22. Tem uma infinidade de números com essa combinação. Dado dois números inteiros positivos, M e N, onde M>N, desenvolver um algoritmo para entrar com dois números positivos e fornecer os valores, dos lados e hipotenusa do triângulo gerado combinando M e N. Onde: L1=M2–N2, L2=2*M*N e Hipotenusa=M2+N2. 
+#include <iostream> 
+
+#include <math.h> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+  
+
+{ 
+
+    float l1, l2, M, N, hipotenusa; 
+
+    cout << "informe o valor de M: "; 
+
+     cin >> M; 
+
+      cout << "informe o valor N: "; 
+
+       cin >> N; 
+
+    l1 = M*M - N*N; 
+
+     l2= 2 * M * N; 
+
+    hipotenusa = (M*M)+(N*N); 
+
+        cout << "O Valor de l1 eh: " << l1 << endl; 
+
+         cout << "O Valor de l2 eh: " << l2 << endl; 
+
+          cout << "O Valor da hipotenusa eh: " << sqrt(hipotenusa); 
+
+} 
+
+ 
+
+ 
+
+Exercício 04: 
+
+4 - Muitos países estão passando a utilizar o sistema métrico. Fazer um algoritmo para executaras seguintes conversões: 
+
+•Ler uma temperatura dada em graus Fahrenheit e imprimir o equivalente em Celsius.Farenheit=95∗C32. 
+
+•Ler uma quantidade de chuva dada em polegadas e imprimir o equivalente em milímetros(1 polegada = 25,4 mm). 
+
+#include <iostream> 
+
+ 
+
+using namespace std; 
+
+ 
+
+ 
+
+int main() 
+
+{ 
+
+    float celc, faren, polegada, mm; 
+
+     cout << "digite a quantidade de graus farenheit a ser convertida em celcius:"; 
+
+      cin >> faren; 
+
+       cout << "digite a quantidade de chuve em polegadas a ser convertida em milmetros:"; 
+
+        cin >> polegada; 
+
+    celc = (faren - 32) * 5/9; 
+
+    mm = polegada * 25,4; 
+
+     cout << "A conversao de farenheit resultou em " << celc << " graus celcius" << endl; 
+
+      cout << "A conversão de cada polegada de chuva resultou em " << mm << "mm" << endl; 
+
+} 
+
+ 
+
+ 
+
+Exercício 05: 
+
+5 - Fazer um algoritmo para ler os valores dos coeficientes A, B e C de uma equação quadrática. Calcular e imprimir o valor do discriminante (delta). Delta = B2 – 4*A*C. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+  
+
+{ 
+
+        float a, b, c, delta; 
+
+                cout << "Este programa ira computar o calculo delta dos valores inseridos!" << endl; 
+
+        cout << "informe valor de A:" ; 
+
+         cin >> a; 
+
+          cout << "informe valor de B:" ; 
+
+           cin >> b; 
+
+           cout << "informe valor de B:" ; 
+
+            cin >> c; 
+
+        delta = (b*b) - 4*a*c; 
+
+        cout << "O calculo de delta resultou em: " << sqrt(delta); 
+
+} 
+
+ 
+
+ 
+
+Exercício 06: 
+
+6 - O custo ao consumidor de um carro novo é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que a percentagem do distribuidor seja de 12% do preço de fábrica e os impostos de 30% do preço de fábrica, fazer um algoritmo para ler o custo de fábrica de um carro e imprimir o custo ao consumidor. 
+
+#include <iostream> 
+
+ 
+
+using namespace std; 
+
+int main() 
+
+{ 
+
+    float dist, fab, carro; 
+
+    cout << "Informe o custo de fabrica do carro:"; 
+
+     cin >> carro; 
+
+     fab = carro + (carro  *0.30); 
+
+      dist = carro - (carro *0.12); 
+
+     cout << "O custo do consumidor eh de R$" << fab << endl; 
+
+      cout << "O custo de fabrica do carro eh de R$" << dist << endl; 
+
+} 
+
+ 
+
+ 
+
+Exercício 07: 
+
+7 - Desenvolver um algoritmo para ler os comprimentos dos três lados de um triângulo (L1, L2e L3) e calcular a área do triângulo de acordo com a fórmula: Área=T∗T−L1∗T−L2∗T−L3e T=L1L2L32. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+ 
+
+using namespace std; 
+
+ 
+
+ 
+
+int main() 
+
+{ 
+
+    float l1, l2, l3, t, area; 
+
+    cout << "informe o primeiro lado do triangulo: "; 
+
+     cin >> l1; 
+
+      cout << "informe o segundo lado do triangulo: "; 
+
+       cin >> l2; 
+
+        cout << "informe o terceiro lado do triangulo:"; 
+
+         cin >> l3; 
+
+    t = (l1 + l2 + l3) / 2; 
+
+    area = t *(t - l1)*(t - l2)*(t-l3); 
+
+     cout << "A area deste triangulo eh de " << sqrt(area) << endl; 
+
+ 
+
+} 
+
+ 
+
+ 
+
+ 
+
+Exercício 08: 
+
+8 - Dados os pontos A e B, cujas coordenadas A(x1, y1) e B(x2, y2) serão informadas via teclado, desenvolver um algoritmo que calcule a distância entre A e B.Onde:Distância=X2−X12Y2−Y12. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+ 
+
+using namespace std; 
+
+ 
+
+ 
+
+int main() 
+
+{ 
+
+    float x1, x2, y1, y2, distancia; 
+
+    cout << "informe os valores de x1: "; 
+
+     cin >> x1; 
+
+      cout << "informe os valores de x2: "; 
+
+       cin >> x2; 
+
+        cout << "informe os valores de y1: "; 
+
+         cin >> y1; 
+
+          cout << "informe os valores de y2: "; 
+
+           cin >> y2; 
+
+    distancia = (x2-x1)*(x2-x1) + (y2-y1)*(y2-y1); 
+
+     cout << "A distancia entre o ponto A e B eh de " << sqrt(distancia) << endl; 
+
+} 
+
+ 
+
+ 
+
+ 
+
+Exercício 09: 
+
+9 - Fazer um algoritmo que dados os 4 elementos de uma matriz 2x2, calcule e escreva o valor do determinante desta matriz.Determinante=∣a11a12a21a22∣=a11∗a22−a21∗a12 
+ 
+
+#include <iostream> 
+
+#include <math.h> 
+
+ 
+
+using namespace std; 
+
+ 
+
+ 
+
+int main() 
+
+{ 
+
+    float m1, m2, m3, m4, determinante, soma1, soma2; 
+
+    cout << "digite o primeiro valor da primeira coluna: "; 
+
+     cin >> m1; 
+
+      cout << "digite o segundo valor da primeira coluna: "; 
+
+       cin >> m2; 
+
+        cout << "digite o primeiro valor da segunda coluna: "; 
+
+         cin >> m3; 
+
+          cout << "digite o segundo valor da segunda coluna: "; 
+
+           cin >> m4; 
+
+    determinante = m1*m4 - m2*m3; 
+
+    cout << endl << determinante << endl; 
+
+} 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Exercício 10: 
+
+10 - Dada a base e a altura de uma pirâmide, fazer um algoritmo que calcule e escreva o seu volume. Volume=13∗base∗altura. 
+
+#include <iostream> 
+
+ 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+int base, altura, volume, volume2, areabase; 
+
+ cout << "digite a base da piramide: "; 
+
+  cin >> base; 
+
+   cout << "digite a altura da piramide: "; 
+
+    cin >> altura; 
+
+areabase = base * base; 
+
+volume =   areabase * altura; 
+
+volume2 = volume / 3; 
+
+cout << “ o volume da pirâmide eh: “ << volume2;			 
+
+} 
+
+ 
+
+ 
+
+Exercício 11: 
+
+11 - Fazer um algoritmo que obtenha o raio e a altura de um cilindro e que calcule e escreva o seu volume e sua área.Área = 2*π*raio*(altura+raio) e Volume = π*raio2*altura. 
+
+#include <iostream> 
+
+ 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+float raio, altura, volume, area; 
+
+cout << "digite o raio do cilindro: "; 
+
+ cin >> raio; 
+
+  cout << "digite a altura do cilindro: "; 
+
+   cin >> altura; 
+
+volume = 3.14*(raio*raio)*altura; 
+
+ area = 2*3.14*raio*(altura+raio); 
+
+cout << "O volume deste cilindro eh de: " << volume << endl; 
+
+ cout << "A area deste cilindro eh de: " << area; 		 
+
+ 
+
+} 
+
+ 
+
+ 
+
+Exercício 12: 
+
+12 - Uma locadora de charretes cobra R$ 8,50 de taxa para cada 3 horas de uso destas e R$3,50 para cada hora abaixo destas 3 horas. Fazer um algoritmo que, dado a quantidade de horas que a charrete foi usada, calcule e escreva quanto o cliente tem de pagar. 
+
+#include <iostream> 
+
+ 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+ 	int horas;  
+
+ float total;  
+
+  cout << "Entre com a quantidade de horas: "; 
+
+   cin >> horas; 
+
+total = horas / 3 * 10; 
+
+total += horas % 3 * 5; 
+
+ cout << "Por " << horas << " horas o cliente deve pagar R$" << total << endl; 
+
+ 
+
+return 0; 
+
+} 
+
+ 
+
+ 
+
+ 
+
+Exercício 13: 
+
+13 - Escreva um algoritmo que leia três números inteiros positivos (A, B, C) e calcule a seguinte expressão: D=RS2,onde R = (A+B)2 e S = (B+C)2. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+ 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+int a, b, c, D, S, R; 
+
+cout << "digite o valor de A: "; 
+
+ cin >> a; 
+
+  cout << "digite o valor de B: "; 
+
+   cin >> b; 
+
+    cout << "digite o valor de C: "; 
+
+     cin >> c; 
+
+R = a + b; 
+
+ R = pow(R, 2); 
+
+  S = b + c; 
+
+ 	   S = pow(S, 2);  
+
+ 	D = (R+S) / 2; 
+
+ 	 cout << "O resultado desa expressao resultou em: " << D;	 
+
+} 
+
+ 
+
+ 
+
+Exercício 14: 
+
+14 - Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e mostre-a, expressa apenas em dias. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+ 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+int anos, meses, dias; 
+
+ cout << "escreva sua idade(somente em anos): "; 
+
+  cin >> anos; 
+
+   cout << "escreva sua idade(somente em meses): "; 
+
+    cin >> meses; 
+
+ cout << "escreva sua idade(somente em dias): "; 
+
+  cin >> dias; 
+
+dias = (dias+(anos*365)+(meses*30)); 
+
+ cout << "Sua idade calculada em dias eh de: " << dias;	 
+
+} 
+
+ 
+
+ 
+
+Exercício 15: 
+
+15 - Faça um algoritmo que leia a idade de uma pessoa expressa em dias e mostre-a, expressa em anos, meses e dias. 
+
+#include <iostream> 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+float anos, meses, dias; 
+
+ cout << "digite sua idade total em dias: "; 
+
+  cin >> dias; 
+
+   anos = dias / 365; 
+
+meses = dias / 30; 
+
+cout << "A idade desse sujeito em anos eh de " << anos << " e sua idade em meses eh de " << meses;  
+
+ 
+
+} 
+
+ 
+
+Exercício 16: 
+
+16 - Faça um algoritmo que leia o tempo de duração de um evento em uma fábrica expresso em segundos e mostre-o expresso em horas, minutos e segundos. 
+
+#include <iostream> 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+int horas, segundos, minutos; 
+
+cout << "Entre com os Segundos: "; 
+
+cin >> segundos; 
+
+ 
+
+minutos = segundos / 60; 
+
+horas = minutos / 60; 
+
+ 
+
+minutos = minutos % 60; 
+
+segundos = segundos % 60; 
+
+ 
+
+cout << horas << " Horas; "; 
+
+cout << minutos << " Minutos; "; 
+
+cout << segundos << " Segundos" << endl; 
+
+ 
+
+return 0; 
+
+} 
+
+ 
+
+ 
+
+Exercício 17: 
+
+17 - Escrever um algoritmo que lê um valor em reais e calcule qual o menor número possível de notas de 100, 50, 10, 5 e 1 em que o valor lido pode ser decomposto. Escrever o valor lido e a relação de notas necessárias. 
+
+#include <iostream> 
+
+using namespace std; 
+
+ 
+
+ 
+
+int main() 
+
+{ 
+
+int n1, n5, n10, n50, n100, reais; 
+
+cout << "Entre com o valor em Reais: "; 
+
+cin >> reais; 
+
+ 
+
+n100 = reais / 100; 
+
+reais -= n100 * 100; 
+
+ 
+
+n50 = reais / 50; 
+
+reais -= n50 * 50; 
+
+ 
+
+n10 = reais / 10; 
+
+reais -= n10 * 10; 
+
+ 
+
+n5 = reais / 5; 
+
+reais -= n5 * 5; 
+
+ 
+
+n1 = reais; 
+
+ 
+
+cout << "O valor pode ser decomposto em:" << endl; 
+
+cout << n100 << " notas de 100 reais" << endl; 
+
+cout << n50 << " notas de 50 reais" << endl; 
+
+cout << n10 << " notas de 10 reais" << endl; 
+
+cout << n5 << " notas de 5 reais" << endl; 
+
+cout << n1 << " notas de 1 real" << endl; 
+
+ 
+
+return 0; 
+
+} 
+
+ 
+
+ 
+
+Exercício 18: 
+
+18 - Escrever um algoritmo que lê: •a percentagem do IPI a ser acrescido no valor das peças;•o código da peça 1, valor unitário da peça 1,quantidade de peças 1;•o código da peça 2, valor unitário da peça 2, quantidade de peças 2.O algoritmo deve calcular o valor total a ser pago e apresentar o resultado.Valortotal: 
+
+#include <iostream> 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+float ipi, valorpeca1, valorpeca2, qntd1, qntd2, valortotal; 
+
+cout << "digite a porcentagem IPI da peca: "; 
+
+ cin >> ipi; 
+
+  cout << "digite o valor da peca1: "; 
+
+   cin >> valorpeca1; 
+
+    cout << "digite o valor da peca2: "; 
+
+     cin >> valorpeca2; 
+
+      cout << "digite a quantidade de peca1: "; 
+
+       cin >> qntd1; 
+
+        cout << "digite a quantidade de peca2: "; 
+
+         cin >> qntd2; 
+
+valortotal = (valorpeca1 * qntd1 + valorpeca2*qntd2) * (ipi/100 + 1); 
+
+ cout << "O valor total a ser pago sera de R$" << valortotal; 
+
+} 
+
+ 
+
+ 
+
+ 
+
+Exercício 19: 
+
+19 - Escreva um algoritmo para calcular o consumo médio de um automóvel (medido em km/l),dado que são conhecidos a distância total percorrida e o volume de combustível consumido para percorrê-la (medido em litros). Observação: a principal questão a ser levantada na elaboração do algoritmo pedido consiste na formulação da expressão usada para calcular o consumo médio(CM), a partir da distância total percorrida (distância) e do volume de combustível consumido(Volume), que é dada por: ConsumoMédio=DistânciaVolume. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+using namespace std; 
+
+  
+
+  
+
+int main() 
+
+{ 
+
+    float distancia, volume, consmedio; 
+
+    cout << "escreva a distancia percorrida em km deste automovel: "; 
+
+     cin >> distancia; 
+
+      cout << "escreva o volume consumido do combustivel em litros: "; 
+
+       cin >> volume; 
+
+    consmedio = distancia/volume; 
+
+     cout << "O consumo medio deste automovel eh: " << consmedio; 
+
+} 
+
+ 
+
+ 
+
+Exercício 20: 
+
+20 - Escrever um algoritmo que lê o número de um funcionário, seu número de horastrabalhadas, o valor que recebe por hora, o número de filhos com idade menor que 14 anos e ovalor do salário família (pago por filho com menos de 14 anos), e que calcule o salário totaldeste funcionário e escreva o seu número e o seu salário total. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+using namespace std; 
+
+  
+
+  
+
+int main() 
+
+{ 
+
+    float numero, horas, valorhora, numerof, salariof, salariototal; 
+
+    cout << "escreva o numero do funcionario: "; 
+
+     cin >> numero; 
+
+      cout << "digite a quantidade horas trabalhadas pelo mesmo: "; 
+
+       cin >> horas; 
+
+        cout << "digite quanto ele ganha por hora: "; 
+
+         cin >> valorhora; 
+
+          cout << "digite quantos filhos com menos de 14 anos ele tem: "; 
+
+           cin >> numerof; 
+
+            cout << "digite tambem o valor do salario da familia: "; 
+
+             cin >> salariof; 
+
+    salariototal = ((horas*valorhora)*30) + salariof; 
+
+     cout << "O numero deste funcionario eh " << numero << " E seu salario total eh de R$" << salariototal; 
+
+} 
+
+ 
+
+ 
+
+Exercício 21: 
+
+21 - Escrever um algoritmo que lê o valor de uma compra em dólares, a taxa do dólar no dia dacompra, o percentual de ICMS e o percentual de lucro da empresa; e que calcule e escreva ovalor a ser pago em reais, sabendo-se que o percentual de lucro e o percentual de ICMSincidem sobre o valor em reais. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+using namespace std; 
+
+  
+
+  
+
+int main() 
+
+{ 
+
+     float compradolar, taxadolar, icms, lucroempresa, valorpagar, comprareais; 
+
+     cout << "digite o preço da compra em dolar: "; 
+
+      cin >> compradolar; 
+
+       cout << "digite a taxa do dolar: "; 
+
+        cin >> taxadolar; 
+
+         cout << "digite o ICMS: "; 
+
+          cin >> icms; 
+
+           cout << "digite o lucro da impresa: "; 
+
+            cin >> lucroempresa; 
+
+    comprareais = compradolar * taxadolar; 
+
+     comprareais = (comprareais*icms/100) + (comprareais * lucroempresa /100) + comprareais; 
+
+      cout << "O valor a ser pago em reais eh de R$" << comprareais; 
+
+} 
+
+ 
+
+ 
+
+Exercício 22: 
+
+22 - Um hotel com 42 apartamentos resolveu fazer promoções para os fins de semana fora daalta temporada, isto é, nos meses de abril, maio, junho, agosto, setembro, outubro e novembro.A taxa da promoção é de 22% da diária normal. A ocupação média do hotel sem promoção éde 40%. A expectativa é aumentar a taxa de ocupação para 70%. Supondo que as expectativasse confirmem, escrever um algoritmo que lê a diária normal, que calcule e escreva as seguintesinformações: (a) O valor da diária no período da promoção. (b) O valor médio arrecadado sem a promoção, durante um mês.(c) O valor médio arrecadado com a promoção, durante um mês.(d) O lucro ou prejuízo mensal com a promoção. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+using namespace std; 
+
+  
+
+  
+
+int main() 
+
+{ 
+
+    float diarianormal, valorpromo, vsempromo, vcompromo, lucropreju; 
+
+    cout << "escreva o valor da diaria normal: "; 
+
+     cin >> diarianormal; 
+
+      valorpromo = 0.22 * diarianormal; 
+
+       vsempromo = (42 * 0.40) * 7 * diarianormal; 
+
+        vcompromo = (42 * 0.70) * 7 * valorpromo; 
+
+         lucropreju = vcompromo - vsempromo; 
+
+    cout << "O valor da diária no período da promoção foi: " << valorpromo << endl; 
+
+     cout << "O valor médio arrecadado sem a promoção, durante um mês foi: " << vsempromo << endl; 
+
+      cout << "O valor médio arrecadado com a promoção, durante um mês foi :" << vcompromo << endl; 
+
+       cout << "O lucro ou prejuizo foi de R$" << lucropreju; 
+
+} 
+
+ 
+
+Exercício 23: 
+
+23 - Escrever um algoritmo que lê um número de 3 dígitos e o inverta, escrevendo o número lido e o invertido. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+using namespace std; 
+
+  
+
+  
+
+int main() 
+
+{ 
+
+    int numero, aux; 
+
+     cout << "Digite um numero inteiro de 3 digitos: "; 
+
+      cin >> numero; 
+
+       if(numero >= 0){ 
+
+        do{ 
+
+            aux = numero % 10; 
+
+             cout << aux; 
+
+              numero /= 10; 
+
+        }while(numero != 0); 
+
+        cout << "\n"; 
+
+       } 
+
+} 
+
+ 
+
+ 
+
+Exercício 24: 
+
+24 - Em uma padaria o padeiro quer saber qual o custo de fabricação do pão francês para saberpor quanto terá que vender o pão, tendo um lucro de 30%. Sabendo-se que a receita do pãoleva farinha, água e fermento, escreva um algoritmo que: leia a quantidade de quilos defarinha, o valor do quilo de farinha, a quantidade de litros de água, o valor do litro de água, aquantidade de quilowatt hora de energia, o valor do quilowatt hora e o percentual do impostoque o padeiro paga pelo pão, calcule o preço de custo e o valor de venda, e escreva estesvalores. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+using namespace std; 
+
+  
+
+  
+
+int main() 
+
+{ 
+
+    float kfarinha, valorfarinha, lagua, vlagua, qwh, valorqwh, custofab, custovenda; 
+
+     cout << "digite quantidade de kilo de farinha: "; 
+
+      cin >> kfarinha; 
+
+       cout << "preco da farinha: "; 
+
+        cin >> valorfarinha; 
+
+         cout << "digite a quantidade de litros d'agua: "; 
+
+          cin >> lagua; 
+
+           cout << "digite o valor da agua: "; 
+
+            cin >> vlagua; 
+
+             cout << "quantidade de quillowatt gasto por hora: "; 
+
+              cin >> qwh; 
+
+               cout << "o preco do quillowatt hora: "; 
+
+                cin >> valorqwh; 
+
+    kfarinha = kfarinha * valorfarinha; 
+
+     lagua = lagua * vlagua; 
+
+      qwh = qwh * valorqwh; 
+
+       custofab = kfarinha + lagua + qwh; 
+
+        custovenda = custofab+(custofab*0.30); 
+
+    cout << "o valor do custo de fabricacao sera de R$" << custofab << endl; 
+
+     cout << "e o valor de venda para que tenha 30% de lucro sera de R$" << custovenda; 
+
+} 
+
+ 
+
+ 
+
+Exercício 25: 
+
+25 - Escrever um algoritmo que lê a massa (tonelada) de um avião, sua aceleração (m/s2) e otempo (s) que levou do repouso até a decolagem. Calcule e escreva a velocidade atingida (km/h), o comprimento da pista (m) e o trabalho mecânico realizado (j) no momento da decolagem.W=(m*v2)/2 . 
+
+#include <iostream> 
+
+#include <math.h> 
+
+using namespace std; 
+
+  
+
+float massa; //!<  Massa do avião em kilo. 
+
+float aceleracao; //!<  Acelereção do avião. 
+
+float tempo; //!< Tempo do repouso até a decolagem em segundos. 
+
+float velocidade; //!<  Velocidade atingida. 
+
+float pista; //!<  Comprimento da pista em metros. 
+
+float t_mecanico; //!<  Trabalho mecânico realizado em joules. 
+
+  
+
+int main() 
+
+{ 
+
+  
+
+cout << "Entre com a massa do avião em toneladas: "; 
+
+cin >> massa; 
+
+massa = massa * 1000; 
+
+  
+
+cout << "Entre com a acelereção do avião: "; 
+
+cin >> aceleracao; 
+
+  
+
+cout << "Entre com o tempo do repouso até a decolagem em segundos: "; 
+
+cin >> tempo; 
+
+  
+
+velocidade = aceleracao * tempo; 
+
+pista = velocidade * tempo; 
+
+t_mecanico = massa * pow(aceleracao, 2) / 2; 
+
+velocidade *= 3.6; 
+
+  
+
+cout << endl << "Velocidade atingida: " << velocidade << "km/h" << endl; 
+
+cout << "Comprimento da pista: " << pista << "m" << endl; 
+
+cout << "Trabalho mecânico realizado: " << t_mecanico << "J" << endl; 
+
+  
+
+return 0; 
+
+} 
+
+ 
+
+ 
+
+ 
+
+Exercício 26: 
+
+26 - Escrever um algoritmo que lê o público total de futebol e forneça a renda do jogo, sabendo-se que havia 4 tipos de ingressos assim distribuídos: popular - 10% a R$ 1,00, geral -50% a R$ 5,00, arquibancada - 30% a R$ 10,00 e cadeiras - 10% a R$ 20,00. 
+
+#include <iostream> 
+
+ 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+    float publico, renda, popular, geral, arquibancada, cadeira; 
+
+     
+
+    cout << "digite a quantidade pessoas no estadio: "; 
+
+     cin >> publico; 
+
+    popular = publico *  0.10; 
+
+     geral = publico * 0.50 * 5; 
+
+      arquibancada = publico * 0.30 * 10; 
+
+       cadeira = publico * 0.10 * 20; 
+
+    renda = popular + geral + arquibancada + cadeira; 
+
+    cout << "O valor total da renda foi R$" << renda; 
+
+} 
+
+ 
+
+ 
+
+Exercício 27: 
+
+27 - Uma auto locadora aluga seus carros com uma taxa fixa por dia, uma taxa por km rodado e desconto de 10% na taxa fixa de aluguel por dia. Escrever um algoritmo que leia a taxa fixa por dia, a taxa por km rodado, o número de dias e o número de quilômetros rodados. Deve também calcular e escrever o valor total do aluguel, o valor do desconto, o número de dias e a quilometragem rodada. 
+
+#include <iostream> 
+
+ 
+
+using namespace std; 
+
+ 
+
+int main() 
+
+{ 
+
+    float taxadia, taxakm, dias, kmr, valor; 
+
+     cout << "digite taxa fixa por dia dia: "; 
+
+      cin >> taxadia; 
+
+       cout << "digite a taxa por km rodados: "; 
+
+        cin >> taxakm; 
+
+         cout << "digite o numero de dias rodados: "; 
+
+          cin >> dias; 
+
+           cout << "digite o numero de km rodados: "; 
+
+            cin >> kmr; 
+
+    taxadia = taxadia+(taxadia*0.10); 
+
+     taxakm = taxakm*kmr; 
+
+      taxadia = taxadia*dias; 
+
+       valor = taxakm+taxadia; 
+
+       cout << "O valor total sera de R$" << valor << endl; 
+
+        cout << "A quantidade de Km rodado foi de " << dias << endl; 
+
+         cout << "E os dias rodados foram " << dias; 
+
+} 
+
+ 
+
+ 
+
+Exercício 28: 
+
+28 - Escrever um algoritmo que leia a taxa de potência de um refrigerador, o tempo que permaneceu ligado, o valor do quilowatt hora e que calcule e escreva a energia total gasta pelo refrigerador, bem como o valor a ser pago à companhia de Energia Elétrica. 
+
+#include <iostream> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+  
+
+{ 
+
+    float qwh, potencia, tempo, tempo1, total, valor; 
+
+    cout << "Diga qual eh a taxa de potencia desse refrigerador: "; 
+
+     cin >> potencia; 
+
+      cout << "Diga qual eh o tempo em que ele permaneceu ligado em horas: "; 
+
+       cin >> tempo; 
+
+        cout << "Informe tambem quanto custa cada quilowatt por hora: "; 
+
+         cin >> qwh; 
+
+    qwh = potencia * tempo; 
+
+     tempo1 = qwh * tempo; 
+
+      valor = qwh + tempo; 
+
+    cout << "O total de energia gasto foi " << qwh << " QuiloWatts/h, O tempo em que permaneceu ligado foi " << tempo << " horas, e o valor total foi de R$" << valor; 
+
+} 
+
+ 
+
+ 
+
+Exercício 29: 
+
+29 - Uma pessoa resolveu fazer uma aplicação em uma poupança programada. Para calcular seu rendimento ela deverá fornecer o valor constante da aplicação mensal, a taxa e o número de meses. Sabe-se que a formula usada para este cálculo é: valor acumulado=1in−1i∗P,ondei = taxa, P = aplicação mensal e n =número de meses. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+using namespace std; 
+
+  
+
+  
+
+int main() 
+
+{ 
+
+    float taxa, apmensal, nmeses, valorfinal; 
+
+     cout << "digite a taxa: "; 
+
+      cin >> taxa; 
+
+       cout << "digite a aplicacao mensal: "; 
+
+        cin >> apmensal; 
+
+         cout << "digite o numero de meses: "; 
+
+          cin >> nmeses; 
+
+    valorfinal = ((1+taxa)*nmeses) -1*apmensal / taxa; 
+
+    cout << "O valor final foi de R$" << valorfinal; 
+
+} 
+
+ 
+
+Exercício 30: 
+
+30 - Criar um algoritmo que, dado o número da conta corrente com três dígitos, retorne o dígito verificador, o qual é calculado da seguinte maneira: Exemplo: número da conta: 235; •Somar o número da conta com seu inverso: 235 + 532 =767;•Multiplicar cada dígito pela sua ordem posicional e somar estes resultados: 767767***12371221= 40•O último digito desse resultado é o dígito verificador da conta (40 → 0);•O número da conta passa a ser 235-0. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+{ 
+
+    int a, c, b, numero, mais, mais1, mais2, mais3, verify, digito; 
+
+     cout << "digite um numero de apenas 3 casas: "; 
+
+      cin >> numero; 
+
+    c = numero % 10; 
+
+     b = numero /10 %10; 
+
+       a = numero / 100; 
+
+    mais = numero+((c*100)+(10*b)+a); 
+
+     mais3 = mais % 10; 
+
+      mais2 = mais /10 %10; 
+
+       mais1 = mais /100; 
+
+    verify = (mais1*3)+(mais2*2)+mais3; 
+
+     digito = verify % 10; 
+
+    cout << "O digito verficador foi: " << digito; 
+
+} 
+
+ 
+
+ 
+
+Exercício 31: 
+
+31 - Ler dois números inteiros quaisquer para as variáveis A e B. Efetuar a troca dos valores deforma que A passe a armazenar o valor de B e que B passe armazenar o valor de A. Imprimir os valores trocados. 
+
+#include <iostream> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+{ 
+
+    int a, b; 
+
+    cout << "digite o valor de A: "; 
+
+    cin >> a; 
+
+    cout << "digite o valor de B: "; 
+
+    cin >> b; 
+
+        a = a + b;	 
+
+        b = a - b; 
+
+        a = a - b;		//calculo simples para troca de valores sem variaveis auxiliares 
+
+    cout << "O valor de A agora eh: " << a  << endl << "O valor de B agora eh: " << b; 
+
+    return 0; 
+
+} 
+
+ 
+
+ 
+
+ 
+
+Exercício 32: 
+
+32 - Fazer um algoritmo que, dado 4 notas de provas, a b, c, e d, calcule e escreva o valor dasseguintes médias:Aritimética=abcd4Harmônica=41a1b1c1dGeométrica=4a∗b∗c∗dQuadrática=a2b2c2d24 
+
+#include <iostream> 
+
+#include <math.h> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+{ 
+
+    float a, b, c, d, aritmetica, harmonica, geometrica, quadratica; 
+
+     cout << "escreva valor da nota A: "; 
+
+      cin >> a; 
+
+       cout << "escreva valor da nota B: "; 
+
+        cin >> b; 
+
+         cout << "escreva valor da nota C: "; 
+
+          cin >> c; 
+
+           cout << "escreva valor da nota D: "; 
+
+            cin >> d; 
+
+    aritmetica = (a+b+c+d)/2; 
+
+     harmonica = 4/(1/a)+(1/b)+(1/c)+(1/d); 
+
+      geometrica = a * b * c * d; 
+
+       quadratica = (a*a)+(b*b)+(c*c)+(d*d)/4; 
+
+        geometrica = sqrt(sqrt(geometrica)); 
+
+         quadratica = sqrt(quadratica); 
+
+          cout << "A raiz aritmetica dos valores eh: " << aritmetica << endl; 
+
+           cout << "A harmonica dos valores eh: " << harmonica << endl; 
+
+            cout << "A geometrica dos valores eh: " << geometrica << endl; 
+
+             cout << "A raiz quadratica dos valores eh: " << quadratica; 
+
+} 
+
+ 
+
+Exercício 33: 
+
+33 - O sistema de avaliação da disciplina programação de computadores segue os seguintescritérios: • quatro avaliações durante o semestre; • 1a avaliação tem peso 2;• 2a avaliação tem peso 4; • 3a avaliação tem peso 6;• 4a avaliação tem peso 8.Fazer um algoritmo que leia as quatro notas de um aluno, calcule e escreva a média ponderada finaldo aluno.Ponderada=1aavaliação∗22aavaliação∗43aavaliação∗64aavaliação∗82468 
+
+#include <iostream> 
+
+#include <math.h> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+{ 
+
+    float av1, av2, av3, av4, peso1, peso2, peso3, peso4, media; 
+
+     cout << "escreva o valor que o aluno tirou na primeira avaliacao: "; 
+
+      cin >> av1; 
+
+       cout << "escreva o valor que o aluno tirou na segunda avaliacao: "; 
+
+        cin >> av2; 
+
+         cout << "escreva o valor que o aluno tirou na terceira avaliacao: "; 
+
+          cin >> av3; 
+
+           cout << "escreva o valor que o aluno tirou na quarta avaliacao: "; 
+
+            cin >> av4; 
+
+    peso1 = av1*2; 
+
+     peso2 = av2*4; 
+
+      peso3 = av3*6; 
+
+       peso4 = av4*8; 
+
+    media = peso1 + peso2 + peso3 + peso4 / 20; 
+
+     cout << "a media ponderada da nota final dele foi: " << media; 
+
+} 
+
+ 
+
+Exercício 34: 
+
+34 - Faça um algoritmo que leia as 3 notas de um aluno e calcule a média final deste aluno.Considerar que a média é ponderada e que o peso das notas são: 2, 3 e 5, respectivamente. 
+
+#include <iostream> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+  
+
+{ 
+
+  
+
+    float n1, n2, n3, peson1, peson2, peson3, media; 
+
+    cout << "Diga o valor das 3 notas do aluno (nota maxima 10): \n"; 
+
+    cin >> n1; 
+
+    cin >> n2; 
+
+    cin >> n3; 
+
+  
+
+    peson1 = n1*3; 
+
+    peson2 = n2*2; 
+
+    peson3 = n3*5; 
+
+    media = 0.10*(peson1+peson2+peson3);	 //calculo com referencia ao peso de cada prova 
+
+  
+
+    cout << "O aluno teve nota final " << media; 
+
+  
+
+return 0; 
+
+  
+
+} 
+
+ 
+
+ 
+
+Exercício 35: 
+
+35 - Fazer um algoritmo que leia um ângulo em graus e imprima o seno, o cosseno e a tangente do ângulo lido. 
+
+#include <iostream> 
+
+#include <math.h> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+{ 
+
+    float angulo, seno, cosseno, tangente; 
+
+     cout << "escreva o angulo desejado (min 30 e max 60): "; 
+
+      cin >> angulo; 
+
+    seno = angulo + 1/2; 
+
+     cosseno = angulo + 3/2; 
+
+      tangente = angulo + 3/3; 
+
+    cout << "o seno eh igual a: " << sqrt(seno) << endl; 
+
+     cout << "o cosseno eh igual a: " << sqrt(cosseno) << endl; 
+
+      cout << "a tangente eh igual a: " << sqrt(tangente); 
+
+} 
+
+ 
+
+Exercício 36: 
+
+36 - Fazer um algoritmo que leia um inteiro positivo, calcule e escreva os seguintes itens: Número: Quadrado: Raiz Quadrada: 
+
+#include <iostream> 
+
+#include <math.h> 
+
+  
+
+using namespace std; 
+
+  
+
+int main() 
+
+{ 
+
+    int numero, raiz, quadrado; 
+
+    cout << "digite o valor do numero: "; 
+
+     cin >> numero; 
+
+      raiz = sqrt(numero); 
+
+      cout << "a raiz quadrada de " << numero << " eh " << raiz << endl; 
+
+       quadrado = numero * numero; 
+
+       cout << numero << " ao quadrado eh " << quadrado; 
+
+  
+
+} 
